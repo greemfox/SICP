@@ -11,3 +11,5 @@
   (if (= count 0)
       b
       (fib-iter (+ a b) a (sub1 count))))
+
+; memoization is another option
