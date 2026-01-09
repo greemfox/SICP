@@ -1,14 +1,13 @@
 #lang racket
-; recursive
-(define (f n)
+;; 1.11
+(define (f n)     ; recursive
   (if (< n 3)
       n
       (+ (f (- n 1))
          (* 2 (f (- n 2)))
          (* 3 (f (- n 3))))))
 
-; iterative
-(define (f-new n)
+(define (f-new n) ; iterative
   (f-iter 2 1 0 n))
 (define (f-iter a b c n)
   (cond ((< n 3) n)
